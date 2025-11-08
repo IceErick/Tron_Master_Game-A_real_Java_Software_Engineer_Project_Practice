@@ -1,3 +1,4 @@
+package com.tronmaster;
 
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
@@ -137,7 +138,7 @@ public class TronMapStory extends TronMap {
 	   super.paintComponent(g);
 	   if (win) {
 		   try {
-			   BufferedImage picture = ImageIO.read(new File("win.png"));
+			   BufferedImage picture = ImageIO.read(new File("tron_master/src/main/resources/images/win.png"));
 			   g.drawImage(
 					   picture, MAPWIDTH / 2 - 130, MAPHEIGHT / 2 - 30, null);
 		   } catch (IOException e) {
@@ -145,7 +146,7 @@ public class TronMapStory extends TronMap {
 	   }
 	   if (over) {
 		   try{
-			   BufferedImage picture = ImageIO.read(new File("over.png"));
+			   BufferedImage picture = ImageIO.read(new File("tron_master/src/main/resources/images/over.png"));
 			   g.drawImage(
 					   picture, MAPWIDTH / 2 - 230, MAPHEIGHT / 2 - 110, null);
 		   } catch (IOException e) {

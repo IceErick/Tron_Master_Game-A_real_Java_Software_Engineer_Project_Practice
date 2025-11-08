@@ -1,3 +1,5 @@
+package com.tronmaster;
+
 import java.awt.Graphics;
 
 // interface for all shapes drawn on the court

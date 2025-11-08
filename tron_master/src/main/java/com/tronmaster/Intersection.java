@@ -1,3 +1,5 @@
+package com.tronmaster;
+
 /**
  * The results of an intersection test: no intersection, or the direction in
  * which the intersection happened.

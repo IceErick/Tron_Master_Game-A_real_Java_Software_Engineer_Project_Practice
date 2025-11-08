@@ -1,3 +1,4 @@
+package com.tronmaster;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -15,7 +16,7 @@ import javax.swing.*;
 public class TronMapSurvival extends TronMap {
 	
 	// creates the list of high scores
-	Score highs = new Score("HighScores.txt");
+	Score highs = new Score("tron_master/src/main/resources/images/HighScores.txt");
 	List<Integer> highScores = new ArrayList<Integer>();
 	
 	// constructor calls super and gets the current high scores
@@ -115,7 +116,7 @@ public class TronMapSurvival extends TronMap {
 	   super.paintComponent(g);
 	   if (!player.getAlive()) {
 		   try{
-			   BufferedImage picture = ImageIO.read(new File("over.png"));
+			   BufferedImage picture = ImageIO.read(new File("tron_master/src/main/resources/images/over.png"));
 			   g.drawImage(
 					   picture, MAPWIDTH / 2 - 230, MAPHEIGHT / 2 - 110, null);
 		   } catch (IOException e) {

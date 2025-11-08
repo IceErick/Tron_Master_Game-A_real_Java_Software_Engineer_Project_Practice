@@ -1,3 +1,5 @@
+package com.tronmaster;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -34,7 +36,7 @@ public class Game implements Runnable {
       final JComponent pict = new JComponent() {
     	  public void paintComponent(Graphics gc) {
     		  super.paintComponent(gc);
-    		  Picture.draw(gc, "tron0_0.jpg", 0, 0);
+    		  Picture.draw(gc, "tron_master/src/main/resources/images/tron0_0.jpg", 0, 0);
     	  }
       };
       // panel for main menu buttons
@@ -43,13 +45,13 @@ public class Game implements Runnable {
       topMenu.setBackground(Color.BLACK);
       
       // buttons for main menu
-	  final JButton play = new JButton(new ImageIcon("play_before.png"));
+	  final JButton play = new JButton(new ImageIcon("tron_master/src/main/resources/images/play_before.png"));
 	  topMenu.add(play);
 	  final JButton instructions = new JButton(
-			  new ImageIcon("instructions_before.png"));
+			  new ImageIcon("tron_master/src/main/resources/images/instructions_before.png"));
 	  topMenu.add(instructions);
 	  final JButton quit = new JButton(
-			  new ImageIcon("quit_before.png"));
+			  new ImageIcon("tron_master/src/main/resources/images/quit_before.png"));
 	  topMenu.add(quit);
 	  
 	  // adds components to the main menu panel
@@ -64,7 +66,7 @@ public class Game implements Runnable {
 	  final JComponent instrPict = new JComponent() {
 		  public void paintComponent(Graphics gc) {
 			  super.paintComponent(gc);
-			  Picture.draw(gc, "instructions_page.png", 0, 0);
+			  Picture.draw(gc, "tron_master/src/main/resources/images/instructions_page.png", 0, 0);
 		  }
 	  };
 	  
@@ -89,11 +91,11 @@ public class Game implements Runnable {
 	  modes.setBackground(Color.BLACK);
 	  
 	  // buttons for playMenuUpper
-	  final JButton story = new JButton(new ImageIcon("story.png"));
+	  final JButton story = new JButton(new ImageIcon("tron_master/src/main/resources/images/story.png"));
 	  modes.add(story);
-	  final JButton survival = new JButton(new ImageIcon("survival.png"));
+	  final JButton survival = new JButton(new ImageIcon("tron_master/src/main/resources/images/survival.png"));
 	  modes.add(survival);
-	  final JButton twoPlayer = new JButton(new ImageIcon("two_player.png"));
+	  final JButton twoPlayer = new JButton(new ImageIcon("tron_master/src/main/resources/images/two_player.png"));
 	  modes.add(twoPlayer);
 	  
 	  // an image to be displayed by playMenuUpper
@@ -101,7 +103,7 @@ public class Game implements Runnable {
 	  final JComponent menuPict = new JComponent() {
 		 public void paintComponent(Graphics gc) {
 			 super.paintComponent(gc);
-			 Picture.draw(gc, "play_menu.jpg", 0, 0);
+			 Picture.draw(gc, "tron_master/src/main/resources/images/play_menu.jpg", 0, 0);
 		 }
 	  };
 	  
@@ -114,9 +116,9 @@ public class Game implements Runnable {
 	  bottomMenu.setBackground(Color.BLACK);
 	  
 	  // buttons for bottomMenu
-	  final JButton highScores = new JButton(new ImageIcon("high_scores.png"));
+	  final JButton highScores = new JButton(new ImageIcon("tron_master/src/main/resources/images/high_scores.png"));
 	  bottomMenu.add(highScores);
-	  final JButton back = new JButton(new ImageIcon("main_menu.png"));
+	  final JButton back = new JButton(new ImageIcon("tron_master/src/main/resources/images/main_menu.png"));
 	  bottomMenu.add(back);
 	  
 	  // adds bottomMenu and playMenuUpper to playMenu
@@ -141,9 +143,9 @@ public class Game implements Runnable {
 	  
 	  
 	  // buttons for returning to the menu and reseting the game
-	  final JButton reset = new JButton(new ImageIcon("restart.png"));
+	  final JButton reset = new JButton(new ImageIcon("tron_master/src/main/resources/images/restart.png"));
 	  survMenu.add(reset);
-	  final JButton exit = new JButton(new ImageIcon("play_before.png"));
+	  final JButton exit = new JButton(new ImageIcon("tron_master/src/main/resources/images/play_before.png"));
 	  survMenu.add(exit);
 	  
 	  // the survival level
@@ -177,9 +179,9 @@ public class Game implements Runnable {
 	  twoMenu.add(scoresTwo);
 	  
 	  // the reset and main menu buttons for two-player mode
-	  final JButton resetTwo = new JButton(new ImageIcon("restart.png"));
+	  final JButton resetTwo = new JButton(new ImageIcon("tron_master/src/main/resources/images/restart.png"));
 	  twoMenu.add(resetTwo);
-	  final JButton exitTwo = new JButton(new ImageIcon("play_before.png"));
+	  final JButton exitTwo = new JButton(new ImageIcon("tron_master/src/main/resources/images/play_before.png"));
 	  twoMenu.add(exitTwo);
 	  
 	  // the two-player level
@@ -216,9 +218,9 @@ public class Game implements Runnable {
 	  storyMenu.add(scoresStory);
 	  
 	  // buttons for reseting the game and returning to the play menu
-	  final JButton resetStory = new JButton(new ImageIcon("restart.png"));
+	  final JButton resetStory = new JButton(new ImageIcon("tron_master/src/main/resources/images/restart.png"));
 	  storyMenu.add(resetStory);
-	  final JButton exitStory = new JButton(new ImageIcon("play_before.png"));
+	  final JButton exitStory = new JButton(new ImageIcon("tron_master/src/main/resources/images/play_before.png"));
 	  storyMenu.add(exitStory);
 	  
 	  // the story level
@@ -246,11 +248,11 @@ public class Game implements Runnable {
 				  mainMenu.remove(instrPict);
 				  mainMenu.add(pict);
 				  instructions.setIcon(
-						  new ImageIcon("instructions_before.png"));
+						  new ImageIcon("tron_master/src/main/resources/images/instructions_before.png"));
 			  } else if (!instructOn) {
 				  mainMenu.remove(pict);
 				  mainMenu.add(instrPict);
-				  instructions.setIcon(new ImageIcon("main_menu.png"));
+				  instructions.setIcon(new ImageIcon("tron_master/src/main/resources/images/main_menu.png"));
 			  }
 			  mainMenu.revalidate();
 			  frame.repaint();
