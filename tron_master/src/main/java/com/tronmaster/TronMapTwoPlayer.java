@@ -1,3 +1,5 @@
+package com.tronmaster;
+
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.*;
@@ -128,7 +130,7 @@ public class TronMapTwoPlayer extends TronMap {
 	   super.paintComponent(g);
 	   if (p1) {
 		   try {
-			   BufferedImage picture = ImageIO.read(new File("p1_wins.png"));
+			   BufferedImage picture = ImageIO.read(new File("tron_master/src/main/resources/images/p1_wins.png"));
 			   g.drawImage
 			   		(picture, MAPWIDTH / 2 - 180, MAPHEIGHT / 2 - 30, null);
 		   } catch (IOException e) {
@@ -136,7 +138,7 @@ public class TronMapTwoPlayer extends TronMap {
 	   }
 	   if (p2) {
 		   try{
-			   BufferedImage picture = ImageIO.read(new File("p2_wins.png"));
+			   BufferedImage picture = ImageIO.read(new File("tron_master/src/main/resources/images/p2_wins.png"));
 			   g.drawImage
 			   		(picture, MAPWIDTH / 2 - 180, MAPHEIGHT / 2 - 30, null);
 		   } catch (IOException e) {
@@ -144,7 +146,7 @@ public class TronMapTwoPlayer extends TronMap {
 	   }
 	   if (tie) {
 		   try {
-			   BufferedImage picture = ImageIO.read(new File("tie.png"));
+			   BufferedImage picture = ImageIO.read(new File("tron_master/src/main/resources/images/tie.png"));
 			   g.drawImage
 			   		(picture, MAPWIDTH / 2 - 120, MAPHEIGHT / 2 - 30, null);
 		   } catch (IOException e) {			   

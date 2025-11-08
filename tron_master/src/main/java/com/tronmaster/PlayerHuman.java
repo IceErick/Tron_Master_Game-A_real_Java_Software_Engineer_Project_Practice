@@ -1,3 +1,5 @@
+package com.tronmaster;
+
 import java.awt.Color;
 
 public class PlayerHuman extends Player {
