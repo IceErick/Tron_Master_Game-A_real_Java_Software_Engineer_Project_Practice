@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane style="-fx-background-color: #000000; -fx-pref-width: 500; -fx-pref-height: 560;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Center area: game canvas container -->
+    <center>
+        <Pane fx:id="gameAreaContainer" style="-fx-background-color: #000000; -fx-pref-width: 500; -fx-pref-height: 500;" />
+    </center>
+
+    <!-- Bottom control bar: score+level + reset + exit -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="15.0" style="-fx-background-color: #000000; -fx-pref-height: 60;">
+            <padding>
+                <Insets left="5.0" right="5.0" />
+            </padding>
+
+            <!-- Score and level display (vertical layout) -->
+            <VBox spacing="0" style="-fx-background-color: #000000; -fx-padding: 0 10 0 10;">
+                <Text fx:id="scoreText" fill="WHITE">
+                    <font>
+                        <Font name="System" size="16" />
+                    </font>
+                </Text>
+                <Text fx:id="levelText" fill="WHITE">
+                    <font>
+                        <Font name="System" size="16" />
+                    </font>
+                </Text>
+            </VBox>
+
+            <!-- Reset button -->
+            <Button fx:id="resetBtn">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <padding>
+                    <Insets bottom="0" left="0" right="0" top="0" />
+                </padding>
+                <graphic>
+                    <ImageView fitHeight="60.0" fitWidth="150.0" preserveRatio="true" />
+                </graphic>
+            </Button>
+
+            <!-- Exit button -->
+            <Button fx:id="exitBtn">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <padding>
+                    <Insets bottom="0" left="0" right="0" top="0" />
+                </padding>
+                <graphic>
+                    <ImageView fitHeight="60.0" fitWidth="150.0" preserveRatio="true" />
+                </graphic>
+            </Button>
+            <BorderPane.margin>
+                <Insets bottom="5.0" top="5.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+
+</BorderPane>
