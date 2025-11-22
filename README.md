@@ -1,2 +1,22 @@
-# Tron_Master_Game-A_real_Java_Software_Engineer_Project_Practice
-This repo is used to develop and maintain my software project: Tron Master, which is a interactive game. In this project, I treated it as a good opportunity to implement all skills from courses "Software Engineer" and "Develop a Maintainable Software". Hope you enjoy my proj~😊
+![Background](contributors/background01.png)
+
+# contributors
+- [Qingyang Liu](contributors/Qingyang_Liu.md)
+- [Yuxuan Li](contributors/Yuxuan_Li.md)
+
+
+# Assessment Deliverables
+
+## Coursework (to be done)
+
+- [Declaration Form >>](javadocs/COMP2059-CW-DF-Team.docx/)
+- [High-level Class Diagram >>](diagram/)
+- [Javadocs Documentation >>](javadocs/)
+- [Demonstration Video >>](video/)
+
+## Source Code
+
+- [Source Code >>](tron-master/src/main/java/com/tron_master)
+
+## Join Project
+```git clone https://csprojects.nottingham.edu.cn/scyyl36/ae2dms-cw-20616316-20617232.git```
