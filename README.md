@@ -4,7 +4,6 @@
 
 * [High-level Class Diagram >>](diagram/)
 * [Javadocs Documentation >>](javadocs/)
-* [Demonstration Video >>](video/)
 
 ## Source Code
 
