@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<!--
+    Wall Layout for Survival Mode
+    Design wall segments using Rectangle elements in SceneBuilder.
+    
+    IMPORTANT: Each Rectangle represents a COMPLETE wall segment.
+    Random gaps will be automatically generated on each wall at runtime!
+    
+    Tips for SceneBuilder:
+    - Each Rectangle defines a full wall (gap will be cut automatically)
+    - Set fill color to visualize (cyan: #00FFFF, magenta: #FF00FF)
+    - Set userData to "cyan" or "magenta" to set wall color in game
+    - Walls should be either horizontal (width > height) or vertical (height > width)
+    - Minimum recommended length: 80px (to allow gap generation)
+    
+    Portals:
+    - Use fx:id starting with "portal_entrance_" for entrance portals (cyan #00FFFF)
+    - Use fx:id starting with "portal_exit_" for exit portals (purple #9933CC)
+    - Entrance and exit with same number suffix will be linked (e.g., portal_entrance_1 -> portal_exit_1)
+    
+    Game Area: 560 x 500
+    Center: (280, 250)
+    Player spawns at corners (distance 230 from center)
+-->
+
+<Pane prefHeight="500" prefWidth="560" style="-fx-background-color: #1a1a2e;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <!-- 6 Concentric Rectangular Rings (aspect ratio 560:500 = 1.12:1) -->
+    <!-- Center: (280, 250), Wall thickness: 4px -->
+    <!-- X-radii: 67, 98, 130, 161, 192, 224 -->
+    <!-- Y-radii: 60, 88, 116, 144, 172, 200 -->
+    
+    <!-- Ring 1 (innermost) - CYAN -->
+    <!-- X: 213-347, Y: 190-310 -->
+    <Rectangle fx:id="ring1_top" fill="#00FFFF" height="4" layoutX="213" layoutY="190" userData="cyan" width="134" />
+    <Rectangle fx:id="ring1_bottom" fill="#00FFFF" height="4" layoutX="213" layoutY="310" userData="cyan" width="134" />
+    <Rectangle fx:id="ring1_left" fill="#00FFFF" height="120" layoutX="213" layoutY="190" userData="cyan" width="4" />
+    <Rectangle fx:id="ring1_right" fill="#00FFFF" height="120" layoutX="343" layoutY="190" userData="cyan" width="4" />
+    
+    <!-- Ring 2 - MAGENTA -->
+    <!-- X: 182-378, Y: 162-338 -->
+    <Rectangle fx:id="ring2_top" fill="#FF00FF" height="4" layoutX="182" layoutY="162" userData="magenta" width="196" />
+    <Rectangle fx:id="ring2_bottom" fill="#FF00FF" height="4" layoutX="182" layoutY="338" userData="magenta" width="196" />
+    <Rectangle fx:id="ring2_left" fill="#FF00FF" height="176" layoutX="182" layoutY="162" userData="magenta" width="4" />
+    <Rectangle fx:id="ring2_right" fill="#FF00FF" height="176" layoutX="374" layoutY="162" userData="magenta" width="4" />
+    
+    <!-- Ring 3 - CYAN -->
+    <!-- X: 150-410, Y: 134-366 -->
+    <Rectangle fx:id="ring3_top" fill="#00FFFF" height="4" layoutX="150" layoutY="134" userData="cyan" width="260" />
+    <Rectangle fx:id="ring3_bottom" fill="#00FFFF" height="4" layoutX="150" layoutY="366" userData="cyan" width="260" />
+    <Rectangle fx:id="ring3_left" fill="#00FFFF" height="232" layoutX="150" layoutY="134" userData="cyan" width="4" />
+    <Rectangle fx:id="ring3_right" fill="#00FFFF" height="232" layoutX="406" layoutY="134" userData="cyan" width="4" />
+    
+    <!-- Ring 4 - MAGENTA -->
+    <!-- X: 119-441, Y: 106-394 -->
+    <Rectangle fx:id="ring4_top" fill="#FF00FF" height="4" layoutX="119" layoutY="106" userData="magenta" width="322" />
+    <Rectangle fx:id="ring4_bottom" fill="#FF00FF" height="4" layoutX="119" layoutY="394" userData="magenta" width="322" />
+    <Rectangle fx:id="ring4_left" fill="#FF00FF" height="288" layoutX="119" layoutY="106" userData="magenta" width="4" />
+    <Rectangle fx:id="ring4_right" fill="#FF00FF" height="288" layoutX="437" layoutY="106" userData="magenta" width="4" />
+    
+    <!-- Ring 5 - CYAN -->
+    <!-- X: 88-472, Y: 78-422 -->
+    <Rectangle fx:id="ring5_top" fill="#00FFFF" height="4" layoutX="88" layoutY="78" userData="cyan" width="384" />
+    <Rectangle fx:id="ring5_bottom" fill="#00FFFF" height="4" layoutX="88" layoutY="422" userData="cyan" width="384" />
+    <Rectangle fx:id="ring5_left" fill="#00FFFF" height="344" layoutX="88" layoutY="78" userData="cyan" width="4" />
+    <Rectangle fx:id="ring5_right" fill="#00FFFF" height="344" layoutX="468" layoutY="78" userData="cyan" width="4" />
+    
+    <!-- Ring 6 (outermost) - MAGENTA -->
+    <!-- X: 56-504, Y: 50-450 -->
+    <Rectangle fx:id="ring6_top" fill="#FF00FF" height="4" layoutX="56" layoutY="50" userData="magenta" width="448" />
+    <Rectangle fx:id="ring6_bottom" fill="#FF00FF" height="4" layoutX="56" layoutY="450" userData="magenta" width="448" />
+    <Rectangle fx:id="ring6_left" fill="#FF00FF" height="400" layoutX="56" layoutY="50" userData="magenta" width="4" />
+    <Rectangle fx:id="ring6_right" fill="#FF00FF" height="400" layoutX="500" layoutY="50" userData="magenta" width="4" />
+    
+    <!-- Portal: 4 corner entrances all teleport to center exit -->
+    <!-- Bottom-left entrance -->
+    <Rectangle fx:id="portal_entrance_1" fill="#00FFFF" height="50.0" layoutX="2.0" layoutY="448.0" width="15.0" />
+    <!-- Bottom-right entrance -->
+    <Rectangle fx:id="portal_entrance_2" fill="#00FFFF" height="50.0" layoutX="542.0" layoutY="448.0" width="15.0" />
+    <!-- Top-right entrance -->
+    <Rectangle fx:id="portal_entrance_3" fill="#00FFFF" height="50.0" layoutX="542.0" layoutY="2.0" width="15.0" />
+    <!-- Top-left entrance -->
+    <Rectangle fx:id="portal_entrance_4" fill="#00FFFF" height="50.0" layoutX="2.0" layoutY="1.0" width="15.0" />
+    <!-- Center exit (shared by all 4 entrances) -->
+    <Rectangle fx:id="portal_exit_1" fill="#9933CC" height="15.0" layoutX="273.0" layoutY="243.0" width="15.0" />
+    <Rectangle fx:id="portal_exit_2" fill="#9933CC" height="15.0" layoutX="273.0" layoutY="243.0" width="15.0" />
+    <Rectangle fx:id="portal_exit_3" fill="#9933CC" height="15.0" layoutX="273.0" layoutY="243.0" width="15.0" />
+    <Rectangle fx:id="portal_exit_4" fill="#9933CC" height="15.0" layoutX="273.0" layoutY="243.0" width="15.0" />
+   <Rectangle fx:id="ring1_left1" fill="#00FFFF" height="33.0" layoutX="278.0" layoutY="-2.0" userData="cyan" width="5.0" />
+   <Rectangle fx:id="ring1_right1" fill="#00FFFF" height="30.0" layoutX="278.0" layoutY="472.0" userData="cyan" width="5.0" />
+   <Rectangle fx:id="ring1_top1" fill="#00FFFF" height="5.0" layoutY="248.0" userData="cyan" width="33.0" />
+   <Rectangle fx:id="ring1_bottom1" fill="#00FFFF" height="5.0" layoutX="527.0" layoutY="248.0" userData="cyan" width="33.0" />
+
+</Pane>

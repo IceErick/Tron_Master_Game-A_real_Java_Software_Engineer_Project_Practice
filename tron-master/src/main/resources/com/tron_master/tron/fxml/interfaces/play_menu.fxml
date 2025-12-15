@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- Bind mode selection controller -->
+
+<BorderPane style="-fx-background-color: #000000; -fx-pref-width: 560; -fx-pref-height: 620;" stylesheets="@../javafx_settings.css" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Center area: mode buttons + background image/high score panel -->
+    <center>
+        <VBox fx:id="centerContainer" alignment="CENTER" style="-fx-background-color: #000000; -fx-pref-width: 500; -fx-pref-height: 250;">
+
+            <!-- Dynamic content: background image/high score panel (fills remaining space) -->
+            <ImageView fx:id="playMenuContent" fitHeight="250.0" fitWidth="560.0" preserveRatio="false" style="-fx-background-color: #000000;" />
+
+        </VBox>
+    </center>
+   <bottom>
+
+
+         <!-- Bottom button bar: high scores + back to main menu -->
+         <HBox alignment="CENTER" spacing="25" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+             <cursor>
+                 <Cursor fx:constant="HAND" />
+             </cursor>
+   
+                <!-- High scores button -->
+             <Button fx:id="highScoresBtn" focusTraversable="false">
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+                 <padding>
+                     <Insets bottom="4.0" top="3.0" />
+                 </padding>
+                 <graphic>
+                     <ImageView fitHeight="40" fitWidth="140" preserveRatio="true" />
+                 </graphic>
+             </Button>
+
+             <!-- Back to main menu button -->
+             <Button fx:id="backBtn" focusTraversable="false">
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+                 <padding>
+                     <Insets bottom="4.0" top="3.0" />
+                 </padding>
+                 <graphic>
+                     <ImageView fitHeight="40" fitWidth="140" preserveRatio="true" />
+                 </graphic>
+             </Button>
+             <padding>
+                 <Insets bottom="10.0" />
+             </padding>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+         </HBox>
+   </bottom>
+   <top>
+
+         <!-- Mode selection button bar: horizontal layout, spacing 15 -->
+         <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #000000;" BorderPane.alignment="CENTER">
+             <!-- Story mode button -->
+             <Button fx:id="storyBtn" focusTraversable="false">
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+                 <padding>
+                     <Insets bottom="3.0" top="5.0" />
+                 </padding>
+                 <graphic>
+                     <ImageView fitHeight="210.0" fitWidth="150.0" preserveRatio="true" />
+                 </graphic>
+             </Button>
+
+             <!-- Survival mode button -->
+             <Button fx:id="survivalBtn" focusTraversable="false">
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+                 <graphic>
+                     <ImageView fitHeight="210.0" fitWidth="150.0" preserveRatio="true" />
+                 </graphic>
+            <padding>
+               <Insets bottom="4.0" top="5.0" />
+            </padding>
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+             </Button>
+
+             <!-- Two-player mode button -->
+             <Button fx:id="twoPlayerBtn" focusTraversable="false">
+                 <cursor>
+                     <Cursor fx:constant="HAND" />
+                 </cursor>
+                 <padding>
+                     <Insets bottom="3.0" top="5.0" />
+                 </padding>
+                 <graphic>
+                     <ImageView fitHeight="210.0" fitWidth="150.0" preserveRatio="true" />
+                 </graphic>
+             </Button>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+         </HBox>
+   </top>
+
+</BorderPane>
