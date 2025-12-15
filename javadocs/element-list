@@ -1,0 +1,13 @@
+module:com.tron_master.tron
+com.tron_master.tron
+com.tron_master.tron.constant
+com.tron_master.tron.controller
+com.tron_master.tron.controller.game_controller
+com.tron_master.tron.controller.interfaces
+com.tron_master.tron.controller.sound
+com.tron_master.tron.model.data
+com.tron_master.tron.model.logic_strategy
+com.tron_master.tron.model.object
+com.tron_master.tron.model.sound
+com.tron_master.tron.view.game_view
+com.tron_master.tron.view.utils

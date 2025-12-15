@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<!--
+    Wall Layout for Two Player Mode
+    Design walls using Rectangle elements in SceneBuilder.
+    Each Rectangle will be converted to a Wall object at runtime.
+    
+    Tips for SceneBuilder:
+    - Use fx:id starting with "wall_" for wall rectangles
+    - Set fill color to visualize (cyan: #00FFFF, magenta: #FF00FF)
+    - Set userData to "cyan" or "magenta" to set wall color in game
+    
+    Game Area: 560 x 500
+    Player 1 spawns at top (280, 50), facing down
+    Player 2 spawns at bottom (280, 450), facing up
+    Keep spawn areas clear!
+-->
+
+<Pane xmlns:fx="http://javafx.com/fxml/1" 
+      prefWidth="560" prefHeight="500"
+      style="-fx-background-color: #1a1a2e;">
+    
+    <!-- Center horizontal barrier with gaps -->
+    <Rectangle fx:id="wall_center_left" layoutX="50" layoutY="248" width="180" height="5" 
+               fill="#00FFFF" userData="cyan"/>
+    <Rectangle fx:id="wall_center_right" layoutX="330" layoutY="248" width="180" height="5" 
+               fill="#00FFFF" userData="cyan"/>
+    
+    <!-- Top area obstacles (avoid spawn point at 280, 50) -->
+    <Rectangle fx:id="wall_top_left" layoutX="80" layoutY="120" width="120" height="5" 
+               fill="#FF00FF" userData="magenta"/>
+    <Rectangle fx:id="wall_top_right" layoutX="360" layoutY="120" width="120" height="5" 
+               fill="#FF00FF" userData="magenta"/>
+    
+    <!-- Bottom area obstacles (avoid spawn point at 280, 450) -->
+    <Rectangle fx:id="wall_bottom_left" layoutX="80" layoutY="380" width="120" height="5" 
+               fill="#FF00FF" userData="magenta"/>
+    <Rectangle fx:id="wall_bottom_right" layoutX="360" layoutY="380" width="120" height="5" 
+               fill="#FF00FF" userData="magenta"/>
+    
+    <!-- Vertical side barriers -->
+    <Rectangle fx:id="wall_left_upper" layoutX="140" layoutY="160" width="5" height="70" 
+               fill="#00FFFF" userData="cyan"/>
+    <Rectangle fx:id="wall_left_lower" layoutX="140" layoutY="280" width="5" height="70" 
+               fill="#00FFFF" userData="cyan"/>
+    
+    <Rectangle fx:id="wall_right_upper" layoutX="415" layoutY="160" width="5" height="70" 
+               fill="#00FFFF" userData="cyan"/>
+    <Rectangle fx:id="wall_right_lower" layoutX="415" layoutY="280" width="5" height="70" 
+               fill="#00FFFF" userData="cyan"/>
+    
+    <!-- Corner obstacles -->
+    <Rectangle fx:id="wall_corner_tl" layoutX="30" layoutY="30" width="60" height="5" 
+               fill="#FF00FF" userData="magenta"/>
+    <Rectangle fx:id="wall_corner_tl_v" layoutX="30" layoutY="30" width="5" height="60" 
+               fill="#FF00FF" userData="magenta"/>
+    
+    <Rectangle fx:id="wall_corner_tr" layoutX="470" layoutY="30" width="60" height="5" 
+               fill="#FF00FF" userData="magenta"/>
+    <Rectangle fx:id="wall_corner_tr_v" layoutX="525" layoutY="30" width="5" height="60" 
+               fill="#FF00FF" userData="magenta"/>
+    
+    <Rectangle fx:id="wall_corner_bl" layoutX="30" layoutY="465" width="60" height="5" 
+               fill="#FF00FF" userData="magenta"/>
+    <Rectangle fx:id="wall_corner_bl_v" layoutX="30" layoutY="410" width="5" height="60" 
+               fill="#FF00FF" userData="magenta"/>
+    
+    <Rectangle fx:id="wall_corner_br" layoutX="470" layoutY="465" width="60" height="5" 
+               fill="#FF00FF" userData="magenta"/>
+    <Rectangle fx:id="wall_corner_br_v" layoutX="525" layoutY="410" width="5" height="60" 
+               fill="#FF00FF" userData="magenta"/>
+
+</Pane>

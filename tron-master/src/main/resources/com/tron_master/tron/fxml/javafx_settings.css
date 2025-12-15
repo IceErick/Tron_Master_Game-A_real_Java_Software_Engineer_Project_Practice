@@ -1,0 +1,71 @@
+.button:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+.button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-background-color: #444;
+}
+
+/* Settings page specific styles */
+.toggle-button {
+    -fx-cursor: hand;
+    -fx-font-size: 12px;
+    -fx-padding: 8px 12px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.toggle-button:selected {
+    -fx-border-color: #00ff00;
+    -fx-border-width: 3px;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.toggle-button:hover {
+    -fx-opacity: 0.9;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* High Score Panel Styles */
+.high-score-panel {
+    -fx-background: #222;
+}
+
+.high-score-container {
+    -fx-background-color: #222;
+    -fx-padding: 30;
+}
+
+.high-score-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+}
+
+.mode-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+}
+
+.score-column {
+    -fx-padding: 10;
+}
+
+.score-label {
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+.score-placeholder {
+    -fx-text-fill: #888;
+    -fx-font-size: 14;
+    -fx-font-style: italic;
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../javafx_settings.css">
+    <center>
+        <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="30.0" bottom="30.0" left="30.0" right="30.0"/>
+            </padding>
+
+            <Label text="Settings" style="-fx-text-fill: white; -fx-font-size: 24; -fx-font-weight: bold;"/>
+            <Label text="Choose game background color" style="-fx-text-fill: #cccccc; -fx-font-size: 14;"/>
+
+            <GridPane hgap="12.0" vgap="12.0" alignment="CENTER">
+                <ToggleButton fx:id="color1" text="Black" style="-fx-background-color: #000000B3; -fx-text-fill: white; -fx-pref-width: 140;"/>
+                <ToggleButton fx:id="color2" text="Deep Blue" GridPane.columnIndex="1" style="-fx-background-color: #0b3d91B3; -fx-text-fill: white; -fx-pref-width: 140;"/>
+                <ToggleButton fx:id="color3" text="Green" GridPane.columnIndex="0" GridPane.rowIndex="1" style="-fx-background-color: #0f6b0fB3; -fx-text-fill: white; -fx-pref-width: 140;"/>
+                <ToggleButton fx:id="color4" text="Teal" GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-background-color: #008b8bB3; -fx-text-fill: white; -fx-pref-width: 140;"/>
+                <ToggleButton fx:id="color5" text="Purple" GridPane.columnIndex="0" GridPane.rowIndex="2" style="-fx-background-color: #3f1a58B3; -fx-text-fill: white; -fx-pref-width: 140;"/>
+                <ToggleButton fx:id="color6" text="Charcoal" GridPane.columnIndex="1" GridPane.rowIndex="2" style="-fx-background-color: #2e2e2eB3; -fx-text-fill: white; -fx-pref-width: 140;"/>
+                <ToggleButton fx:id="color7" text="Orange" GridPane.columnIndex="0" GridPane.rowIndex="3" style="-fx-background-color: #b34700B3; -fx-text-fill: white; -fx-pref-width: 140;"/>
+                <ToggleButton fx:id="color8" text="Dark Red" GridPane.columnIndex="1" GridPane.rowIndex="3" style="-fx-background-color: #8b0000B3; -fx-text-fill: white; -fx-pref-width: 140;"/>
+            </GridPane>
+
+            <VBox spacing="8.0" alignment="CENTER">
+                <Label text="Preview" style="-fx-text-fill: #cccccc; -fx-font-size: 14;"/>
+                <Region fx:id="previewBox" prefWidth="240.0" prefHeight="120.0" style="-fx-background-color: #000000B3; -fx-border-color: white; -fx-border-width: 1;"/>
+            </VBox>
+
+            <HBox spacing="12.0" alignment="CENTER">
+                <Button fx:id="saveBtn" text="Save" prefWidth="140.0"/>
+                <Button fx:id="backBtn" text="Back" prefWidth="140.0"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

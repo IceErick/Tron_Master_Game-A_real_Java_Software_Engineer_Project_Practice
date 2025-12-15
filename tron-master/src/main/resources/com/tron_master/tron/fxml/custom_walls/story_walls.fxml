@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<!--
+    Wall Layout for Story Mode
+    Design walls using Rectangle elements in SceneBuilder.
+    Each Rectangle will be converted to a Wall object at runtime.
+    
+    Tips for SceneBuilder:
+    - Use fx:id starting with "wall_" for wall rectangles
+    - Set fill color to visualize (cyan: #00FFFF, magenta: #FF00FF)
+    - Set userData to "cyan" or "magenta" to set wall color in game
+    
+    Portals:
+    - Use fx:id starting with "portal_entrance_" for entrance portals (cyan #00FFFF)
+    - Use fx:id starting with "portal_exit_" for exit portals (purple #9933CC)
+    - Entrance and exit with same number suffix will be linked (e.g., portal_entrance_1 -> portal_exit_1)
+    
+    Game Area: 560 x 500
+    Players spawn randomly in range (80-480, 80-420) to avoid walls
+    Safe zones maintained around spawn areas.
+-->
+
+<Pane prefHeight="500" prefWidth="560" style="-fx-background-color: #1a1a2e;" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1">
+    
+    <!-- Vertical center bar (with gap in middle for movement) -->
+    <Rectangle fx:id="wall_center_top" fill="#FF00FF" height="214.0" layoutX="278.0" layoutY="21.0" userData="magenta" width="5" />
+    <Rectangle fx:id="wall_center_bottom" fill="#FF00FF" height="214.0" layoutX="278" layoutY="267.0" userData="magenta" width="5" />
+    
+    <!-- Portal pair 1: left side entrance -> right side exit -->
+    <Rectangle fx:id="portal_entrance_1" fill="#00FFFF" height="27.0" layoutX="58.0" layoutY="54.0" styleClass="portal-entrance" width="10.0" />
+    <Rectangle fx:id="portal_exit_1" fill="#9933CC" height="27.0" layoutX="486.0" layoutY="421.0" styleClass="portal-exit" width="10" />
+
+</Pane>

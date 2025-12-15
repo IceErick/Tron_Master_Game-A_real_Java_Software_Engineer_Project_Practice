@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- instructions_dialog.fxml -->
+
+<?import javafx.scene.Cursor?>
+<BorderPane xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tron_master.tron.controller.interfaces.InstructionsController" stylesheets="@../javafx_settings.css">
+    <center>
+        <ImageView fx:id="instructionsImage" fitHeight="500" fitWidth="500"/>
+    </center>
+    <bottom>
+        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #000000;">
+            <padding>
+                <Insets bottom="10.0" top="10.0" />
+            </padding>
+            <Button fx:id="closeButton" onAction="#onCloseButtonClick" prefHeight="26.0" prefWidth="481.0" text="Close" />
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+        </VBox>
+    </bottom>
+</BorderPane>

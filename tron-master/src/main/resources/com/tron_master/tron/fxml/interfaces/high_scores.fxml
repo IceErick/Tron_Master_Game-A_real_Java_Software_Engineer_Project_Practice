@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<!-- high_scores.fxml -->
+
+<ScrollPane fitToWidth="true" styleClass="high-score-panel" xmlns="http://javafx.com/javafx/24"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.tron_master.tron.controller.interfaces.HighScoreDialogController"
+            stylesheets="@../javafx_settings.css" prefWidth="560.0" prefHeight="250.0">
+    <VBox alignment="CENTER" spacing="15" styleClass="high-score-container">
+        <Label fx:id="titleLabel" styleClass="high-score-title" text="High Scores"/>
+        <!-- Two-column layout -->
+        <HBox spacing="40" alignment="CENTER">
+            <!-- Story mode column -->
+            <VBox fx:id="storyScoreContainer" alignment="TOP_CENTER" spacing="10" styleClass="score-column">
+                <Label styleClass="mode-title" text="Story Mode"/>
+                <!-- Story scores will be added dynamically (top 10) -->
+            </VBox>
+            <!-- Survival mode column -->
+            <VBox fx:id="survivalScoreContainer" alignment="TOP_CENTER" spacing="10" styleClass="score-column">
+                <Label styleClass="mode-title" text="Survival Mode"/>
+                <!-- Survival scores will be added dynamically (top 10) -->
+            </VBox>
+        </HBox>
+    </VBox>
+</ScrollPane>
